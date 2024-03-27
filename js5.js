@@ -72,21 +72,49 @@ console.log(giveMeRandom(5))
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function area(l1,l2){
+
+    return l1*l2
+
+}
+let risultato = area(5,6)
+console.log(risultato)
+
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(par1){
+    let differenza= Math.abs(par1 - 19)
+    if (differenza >19){
+        return differenza *3;
+    } else{
+        return differenza
+    }
+
+}
+
+let differenza = crazyDiff(39)
+console.log(differenza)
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function codify (par1){
+    const code = "code"
+    
+    if(par1.startsWith(code)){
+        return par1
+    } else{
+        return code + par1
+    }
+}
+let finale = codify("aaa")
+console.log(finale)
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -94,10 +122,24 @@ console.log(giveMeRandom(5))
  SUGGERIMENTO: operatore modulo
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7 (par1){
+    if (par1 %3 === 0){
+        return true
+    } else if(par1 %7 === 0){
+        return true
+    } else{
+        return false
+    }
+}
+
+console.log(check3and7(20))
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(par1){
+    return par1.slice(1, -1)
+}
+
+console.log(cutString("scrivania"))
